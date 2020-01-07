@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+.movie-rows {
+  max-width: 100%;
+  display: flex;
+}
+
 .movie-cover {
-  width: 100%;
+  flex: 1;
+  height: 750px;
 }
