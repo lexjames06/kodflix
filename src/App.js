@@ -12,20 +12,34 @@ function App() {
     <div className="App">
       <h1>Welcome to Kodflix</h1>
       <div className="movie-rows">
-        <img src={coolRunnings}
-          alt="cool runnings movie cover"
-          className="movie-cover"
-        />
-        <img src={soulPlane}
-          alt="soul plane movie cover"
-          className="movie-cover"
-        />
-        <img src={howHigh}
-          alt="how high movie cover"
-          className="movie-cover"
-        />
+        <div className="movie-cover">
+          <img src={coolRunnings} alt="cool runnings movie cover" />
+        </div>
+        <div className="movie-cover">
+          <img src={soulPlane} alt="soul plane movie cover" />
+        </div>
+        <div className="movie-cover">
+          <img src={howHigh} alt="how high movie cover" />
+        </div>
       </div>
       <div className="movie-rows">
+        <div className="movie-cover">
+          <img src={boyz} alt="boyz movie cover" />
+        </div>
+        <div className="movie-cover">
+          <img src={menace} alt="menace movie cover" />
+        </div>
+        <div className="movie-cover">
+          <img src={friday} alt="friday movie cover" />
+        </div>
+      </div>
+
+
+
+
+
+
+      {/* <div className="movie-rows">
         <img src={boyz}
           alt="boyz in the hood movie cover"
           className="movie-cover"
@@ -39,6 +53,20 @@ function App() {
           className="movie-cover"
         />
       </div>
+      <div className="movie-rows">
+        <img src={coolRunnings}
+          alt="cool runnings movie cover"
+          className="movie-cover"
+        />
+        <img src={soulPlane}
+          alt="soul plane movie cover"
+          className="movie-cover"
+        />
+        <img src={howHigh}
+          alt="how high movie cover"
+          className="movie-cover"
+        />
+      </div> */}
     </div>
   );
 }

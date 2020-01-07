@@ -3,11 +3,27 @@
 }
 
 .movie-rows {
-  max-width: 100%;
+  max-width: 100vw;
+  height: auto;
   display: flex;
 }
 
 .movie-cover {
   flex: 1;
-  height: 750px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .movie-rows {
+    flex-direction: column;
+  }
+
+  .movie-cover {
+    height: auto;
+    width: 100%;
+  }
 }
