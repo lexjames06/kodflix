@@ -2,35 +2,34 @@
   text-align: center;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
 .movie-rows {
-  max-width: 100vw;
-  height: auto;
   display: flex;
 }
 
 .movie-cover {
   flex: 1;
   position: relative;
-}
-
-.movie-cover:hover .movie-title {
-  opacity: 85%;
-  transform: translateY(-30px);
-  transition: 0.5s;
+  overflow: hidden;
 }
 
 .movie-title {
   position: absolute;
-  bottom: -30px;
+  bottom: -100px;
   background-color: black;
   width: 100%;
   color: white;
   opacity: 0%;
 }
 
-img {
-  width: 100%;
-  height: 100%;
+.movie-cover:hover .movie-title {
+  opacity: 0.85;
+  transform: translateY(-100px);
+  transition: ease 0.8s;
 }
 
 @media only screen and (max-width: 600px) {

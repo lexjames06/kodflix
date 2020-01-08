@@ -1,4 +1,5 @@
 import React from 'react';
+import Movie from './Movie.js';
 import coolRunnings from './movie covers/cool runnings.jpg';
 import soulPlane from './movie covers/soul plane.jpg';
 import howHigh from './movie covers/how high.jpg';
@@ -9,47 +10,41 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <h1>Welcome to Kodflix</h1>
-      <div className="movie-rows">
-        <div className="movie-cover">
-          <img src={coolRunnings} alt="cool runnings movie cover" />
-          <div className="movie-title">
-            <h3>Cool Runnings (1993)</h3>
-          </div>
-        </div>
-        <div className="movie-cover">
-          <img src={soulPlane} alt="soul plane movie cover" />
-          <div className="movie-title">
-            <h3>Soul Plane (2004)</h3>
-          </div>
-        </div>
-        <div className="movie-cover">
-          <img src={howHigh} alt="how high movie cover" />
-          <div className="movie-title">
-            <h3>How High (2001)</h3>
-          </div>
-        </div>
+      <div className='movie-rows'>
+          <Movie 
+          name='Cool Runnings'
+          year='1993'
+          cover={coolRunnings}
+          />
+          <Movie 
+          name='Soul Plane'
+          year='2004'
+          cover={soulPlane}
+          />
+          <Movie 
+          name='How High'
+          year='2001'
+          cover={howHigh}
+          />
       </div>
-      <div className="movie-rows">
-        <div className="movie-cover">
-          <img src={boyz} alt="boyz n the hood movie cover" />
-          <div className="movie-title">
-            <h3>Boyz N The Hood (1991)</h3>
-          </div>
-        </div>
-        <div className="movie-cover">
-          <img src={menace} alt="menace to society movie cover" />
-          <div className="movie-title">
-            <h3>Menace II Society (1993)</h3>
-          </div>
-        </div>
-        <div className="movie-cover">
-          <img src={friday} alt="friday movie cover" />
-          <div className="movie-title">
-            <h3>Friday (1995)</h3>
-          </div>
-        </div>
+      <div className='movie-rows'>
+        <Movie 
+          name='Boyz N The Hood'
+          year='1991'
+          cover={boyz}
+          />
+          <Movie 
+          name='Menace II Society'
+          year='1993'
+          cover={menace}
+          />
+          <Movie 
+          name='Friday'
+          year='1995'
+          cover={friday}
+          />
       </div>
     </div>
   );
