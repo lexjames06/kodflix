@@ -13,11 +13,11 @@ img {
 }
 
 .movie-rows {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(363px, 1fr));
 }
 
 .movie-cover {
-  flex: 1;
   position: relative;
   overflow: hidden;
 }
@@ -39,7 +39,9 @@ img {
 
 @media only screen and (max-width: 600px) {
   .movie-rows {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+
   }
 
   .movie-cover {

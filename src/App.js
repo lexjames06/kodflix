@@ -1,7 +1,7 @@
 import React from 'react';
 import Cover from './Cover.js'
 import Details from './Details.js'
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import './App.css';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <h1>Welcome to Kodflix</h1>
       <BrowserRouter>
         <Route exact path="/" component={Cover} />
-        <Route exact path="/details" component={Details} />
+        <Route exact path="/:id" component={Details} />
       </BrowserRouter>
     </div>
   );
