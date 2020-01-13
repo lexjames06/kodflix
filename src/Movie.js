@@ -1,4 +1,5 @@
 import React from 'react'
+import Cover from './Cover.js';
 
 export default function Movie(props) {
     return (
