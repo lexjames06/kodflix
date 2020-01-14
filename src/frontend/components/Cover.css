@@ -1,0 +1,11 @@
+.movie-rows {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(363px, 1fr));
+  }
+
+@media only screen and (max-width: 600px) {
+    .movie-rows {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
-import Cover from './Cover.js'
-import Details from './Details.js'
+import Cover from './components/Cover.js'
+import Details from './components/Details.js'
 import { BrowserRouter, Route } from 'react-router-dom'
 import './App.css';
 
