@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className='App'>
+    <div className='App' >
       <h1>Welcome to Kodflix</h1>
       <BrowserRouter>
         <Route exact path="/" component={Cover} />
@@ -15,5 +15,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
