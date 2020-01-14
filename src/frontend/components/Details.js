@@ -1,20 +1,19 @@
 import React from 'react';
-import ReactTimeout from 'react-timeout'
 
 class Details extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       message: "Hello, this will be the details page for each Movie & TV show :)"
     }
   }
 
-  comingSoon = () => {
-    this.setState({ message: "Coming Soon!" })
-  }
-
-  componentDidMount(props) {
-    return this.props.setTimeout(this.comingSoon, 3000);
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        message: "Coming Soon!"
+      });
+    }, 3000);
   }
 
   render() {
@@ -26,4 +25,4 @@ class Details extends React.Component {
   }
 }
 
-export default ReactTimeout(Details);
+export default Details;
