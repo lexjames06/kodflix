@@ -17,8 +17,6 @@ class Details extends React.Component {
     return this.props.setTimeout(this.comingSoon, 3000);
   }
 
-  
-
   render() {
     return (
       <div>
