@@ -1,0 +1,11 @@
+.klogo {
+    height: 50vh;
+    width: auto;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
