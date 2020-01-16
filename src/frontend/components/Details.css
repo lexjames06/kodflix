@@ -1,3 +1,14 @@
+.link-div {
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 5vh;
+}
+
 .link:link {
     color: red;
 }
@@ -8,4 +19,16 @@
 
 .link:hover {
     color: white;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.year {
+    margin-top: -30px;
+}
+
+.details {
+    padding-top: 30px;
 }

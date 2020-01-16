@@ -6,11 +6,12 @@ img {
 .movie-cover {
     position: relative;
     overflow: hidden;
+    margin: 10px;
   }
   
   .title-overlay {
     position: absolute;
-    bottom: -100px;
+    top: -100px;
     background-color: black;
     width: 100%;
     color: white;
@@ -18,8 +19,8 @@ img {
   }
 
   .movie-cover:hover .title-overlay {
-    opacity: 0.85;
-    transform: translateY(-100px);
+    opacity: 0.9;
+    transform: translateY(100px);
     transition: ease 0.8s;
   }
 

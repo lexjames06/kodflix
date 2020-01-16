@@ -1,6 +1,16 @@
 .klogo {
     height: 50vh;
     width: auto;
+    background-color: rgb(250, 0, 0, 0);
+    position: relative;
+    z-index: 1;
+}
+
+.gradient {
+    height: 50vh;
+    width: auto;
+    position: absolute;
+    z-index: 0;
 }
 
 .container {

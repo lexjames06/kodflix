@@ -1,15 +1,16 @@
 import React from 'react';
-import { Link, BrowserRouter, Route} from 'react-router-dom';
-import './Details.css';
+import { Link } from 'react-router-dom';
 import GetCover from './Cover-get.js'
+import Header from './Header'
+import './Details.css';
 
 class Details extends React.Component {
   constructor() {
     super();
     this.state = {
-      title: 'Hello',
+      title: '',
       message: `The details about the movie will display here :)`,
-      color: 'white'
+      color: 'grey'
     };
   }
 
@@ -19,8 +20,10 @@ class Details extends React.Component {
       return movie.id === movieId;
     });
     let title = movie.name;
-    this.setState({ 
-      title: title
+    let year = movie.year;
+    this.setState({
+      title: title,
+      year: `(${year})`
     });
     console.log(this.state.title)
     setTimeout(() => {
@@ -34,12 +37,14 @@ class Details extends React.Component {
   render() {
     return (
       <div>
+        <Header />
         <div>
           <h1>{this.state.title}</h1>
-          <h2 style={{color: this.state.color}}>{this.state.message}</h2>
+          <h2 className="year">{this.state.year}</h2>
+          <h2 style={{ color: this.state.color }} className="details">{this.state.message}</h2>
         </div>
-        <div>
-          <Link to="/" className="link">Back to home page</Link>
+        <div className="link-div">
+          <Link to="/kodflix" className="link">Back to home page</Link>
         </div>
       </div>
     );
