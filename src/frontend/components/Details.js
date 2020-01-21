@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import GetCover from './Cover-get.js'
 import Header from './Header'
 import './Details.css';
@@ -8,7 +8,7 @@ class Details extends React.Component {
   constructor() {
     super();
     this.state = {
-      title: '',
+      movie: '',
       message: `The details about the movie will display here :)`,
       color: 'grey'
     };
@@ -16,16 +16,8 @@ class Details extends React.Component {
 
   componentDidMount() {
     let movieId = this.props.match.params.movieId;
-    let movie = GetCover().find(function (movie) {
-      return movie.id === movieId;
-    });
-    let title = movie.name;
-    let year = movie.year;
-    this.setState({
-      title: title,
-      year: `(${year})`
-    });
-    console.log(this.state.title)
+    let movie = GetCover().find((movie) => movie.id === movieId);
+    this.setState({ movie });
     setTimeout(() => {
       this.setState({
         message: `Coming Soon!`,
@@ -35,19 +27,23 @@ class Details extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <Header />
+    if (this.state.movie === undefined) {
+      return <Redirect to='/not-found' />
+    } else {
+      return (
         <div>
-          <h1>{this.state.title}</h1>
-          <h2 className="year">{this.state.year}</h2>
-          <h2 style={{ color: this.state.color }} className="details">{this.state.message}</h2>
+          <Header />
+          <div>
+            <h1>{this.state.movie.name}</h1>
+            <h2 className="year">({this.state.movie.year})</h2>
+            <h2 style={{ color: this.state.color }} className="details">{this.state.message}</h2>
+          </div>
+          <div className="link-div">
+            <Link to="/kodflix" className="link">Back to home page</Link>
+          </div>
         </div>
-        <div className="link-div">
-          <Link to="/kodflix" className="link">Back to home page</Link>
-        </div>
-      </div>
-    );
+      );
+    }
   }
 }
 

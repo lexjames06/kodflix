@@ -2,16 +2,20 @@ import React from 'react';
 import Cover from './components/Cover.js'
 import Details from './components/Details.js'
 import Welcome from './components/Welcome'
-import { BrowserRouter, Route } from 'react-router-dom'
+import NotFound from './components/Not-Found'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Route exact path="/kodflix" component={Cover} />
-        <Route exact path="/movie/:movieId" component={Details} />
-        <Route exact path="/" component={Welcome} />
+        <Switch>
+          <Route exact path="/kodflix" component={Cover} />
+          <Route exact path="/not-found" component={NotFound} />
+          <Route exact path="/:movieId" component={Details} />
+          <Route exact path="/" component={Welcome} />
+        </Switch>
       </BrowserRouter>
     </div>
   );

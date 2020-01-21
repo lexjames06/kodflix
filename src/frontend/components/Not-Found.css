@@ -1,0 +1,27 @@
+.link-div {
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 5vh;
+}
+
+.link:link {
+    color: red;
+}
+
+.link:visited {
+    color: cyan;
+}
+
+.link:hover {
+    color: white;
+}
+
+.notFound {
+    width: 90vw;
+    margin: 0 5vw;
+}

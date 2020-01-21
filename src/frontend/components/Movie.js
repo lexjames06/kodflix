@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './Movie.css'
 
 export default function Movie(props) {
-  let url = `movie/${props.id}`;
+  let url = `/${props.id}`;
   return (
     <div className='movie-cover'>
       <Link to={url}><img src={props.cover} alt={`${props.name} movie cover`} /></Link>
