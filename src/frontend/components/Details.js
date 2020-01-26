@@ -24,7 +24,7 @@ class Details extends React.Component {
     } else {
       return (
         <div>
-          <div className="synopsis-image">
+          <div className="synopsis-image" id="synopsis-image">
             <img src={this.state.movie.synopsisCover} alt="" />
           </div>
           <div className="description">

@@ -37,10 +37,9 @@ h1 {
 }
 
 @media only screen and (max-width: 600px) {
-    .synopsis-image {
-        width: 1200px;
-        margin-left: -300px;
+    #synopsis-image {
+        object-fit: cover;
         height: 50vh;
-        overflow: hidden;
+        width: 100vw;
     }
 }
