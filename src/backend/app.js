@@ -3,10 +3,16 @@ const movieList = require ('./movielist')
 
 const listOfMovies = movieList;
 const app = express()
-const port = 3001
+const port = process.env.PORT || 3001;
  
 app.get('/rest/movies', (req, res) => {
   res.send(listOfMovies);
+});
+
+app.use(express.static(path.join(__dirname, '../../build')));
+
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, '../../build', 'index.html'));
 });
  
 app.listen(port, );
