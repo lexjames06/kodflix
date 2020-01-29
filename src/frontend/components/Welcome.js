@@ -38,12 +38,12 @@ export default function Welcome() {
         style={props1}
         className="container"
       >
-        <img src={gradient} className="gradient" />
+        <img src={gradient} className="gradient" alt=""/>
         <animated.div
           style={props2}
           className="container"
         >
-          <img className="klogo" src={Klogo} />
+          <img className="klogo" src={Klogo} alt=""/>
         </animated.div>
       </animated.div>
     </Link>

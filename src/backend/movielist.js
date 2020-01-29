@@ -23,4 +23,4 @@ synopsis: 'A parody of several U.S. films about being in the \'Hood\', for insta
 { id: "barbershop", name: "Barbershop", year: "2002",
 synopsis: 'A day in the life of a South Side Chicago barbershop.' }];
 
-module.exports = movieList;
+module.exports.movieList = movieList;

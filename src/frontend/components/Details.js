@@ -8,14 +8,17 @@ class Details extends React.Component {
     super();
     this.state = {
       movie: '',
-      message: `The details about the movie will display here :)`,
+      synopsis: `The details about the movie will display here :)`,
     };
   }
 
   componentDidMount() {
     let movieId = this.props.match.params.movieId;
     let movie = GetCover().find((movie) => movie.id === movieId);
-    this.setState({ movie, message: movie.synopsis });
+    this.setState({ movie });
+    fetch('/rest/movies')
+        .then(response => response.json())
+        .then(data => console.log('here is: ', data));
   }
 
   render() {
@@ -30,7 +33,7 @@ class Details extends React.Component {
           <div className="description">
             <h1 className="movie-title">{this.state.movie.name}</h1>
             <h2 className="year">({this.state.movie.year})</h2>
-            <h2 style={{ color: this.state.color }} className="details">{this.state.message}</h2>
+            <h2 className="details">{this.state.movie.synopsis}</h2>
           </div>
           <div className="link-div">
             <Link to="/kodflix" className="link">Back to homepage</Link>

@@ -6,6 +6,7 @@ import { animated, useSpring } from 'react-spring'
 import './Cover.css'
 
 export default function Cover() {
+
     const props1 = useSpring({
         from: {
             opacity: 0,

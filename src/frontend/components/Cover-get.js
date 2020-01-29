@@ -1,4 +1,3 @@
-import React from 'react'
 import coolRunnings from '../assets/movie covers/cool runnings.jpg';
 import soulPlane from '../assets/movie covers/soul plane.jpg';
 import howHigh from '../assets/movie covers/how high.jpg';
