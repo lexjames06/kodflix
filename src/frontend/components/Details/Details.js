@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import GetCover from './Cover-get.js'
+import GetCover from '../Cover-get/Cover-get.js'
 import './Details.css';
 
 class Details extends React.Component {

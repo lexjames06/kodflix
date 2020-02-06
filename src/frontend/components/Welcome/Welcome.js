@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom'
-import Klogo from '../assets/Logos/K-logo.png';
-import gradient from '../assets/Logos/gradient.png'
+import Klogo from '../../assets/Logos/K-logo.png';
+import gradient from '../../assets/Logos/gradient.png'
 import './Welcome.css'
 
 export default function Welcome() {

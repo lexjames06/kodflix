@@ -1,27 +1,27 @@
-import coolRunnings from '../assets/movie covers/cool runnings.jpg';
-import soulPlane from '../assets/movie covers/soul plane.jpg';
-import howHigh from '../assets/movie covers/how high.jpg';
-import boyz from '../assets/movie covers/boyz.jpg';
-import menace from '../assets/movie covers/menace.jpg';
-import friday from '../assets/movie covers/friday.jpg';
-import straight from '../assets/movie covers/straight outta compton.jpg';
-import above from '../assets/movie covers/above the rim.jpg';
-import juice from '../assets/movie covers/juice.jpg';
-import sixth from '../assets/movie covers/the sixth man.jpg';
-import dont from '../assets/movie covers/dont be a menace.jpg';
-import barber from '../assets/movie covers/barbershop.jpg';
-import coolRunningsSynopsis from '../assets/synopsis covers/cool runnings.jpg'
-import soulPlaneSynopsis from '../assets/synopsis covers/soul plane.jpg'
-import howHighSynopsis from '../assets/synopsis covers/how high.jpg'
-import boyzSynopsis from '../assets/synopsis covers/boyz.jpg'
-import menaceSynopsis from '../assets/synopsis covers/menace.jpg'
-import fridaySynopsis from '../assets/synopsis covers/friday.jpg'
-import straightSynopsis from '../assets/synopsis covers/straight.jpg'
-import aboveSynopsis from '../assets/synopsis covers/above the rim.jpg'
-import juiceSynopsis from '../assets/synopsis covers/juice.jpg'
-import sixthSynopsis from '../assets/synopsis covers/the sixth man.jpg'
-import dontSynopsis from '../assets/synopsis covers/dont.jpg'
-import barberSynopsis from '../assets/synopsis covers/barbershop.jpg'
+import coolRunnings from '../../assets/movie covers/cool runnings.jpg';
+import soulPlane from '../../assets/movie covers/soul plane.jpg';
+import howHigh from '../../assets/movie covers/how high.jpg';
+import boyz from '../../assets/movie covers/boyz.jpg';
+import menace from '../../assets/movie covers/menace.jpg';
+import friday from '../../assets/movie covers/friday.jpg';
+import straight from '../../assets/movie covers/straight outta compton.jpg';
+import above from '../../assets/movie covers/above the rim.jpg';
+import juice from '../../assets/movie covers/juice.jpg';
+import sixth from '../../assets/movie covers/the sixth man.jpg';
+import dont from '../../assets/movie covers/dont be a menace.jpg';
+import barber from '../../assets/movie covers/barbershop.jpg';
+import coolRunningsSynopsis from '../../assets/synopsis covers/cool runnings.jpg'
+import soulPlaneSynopsis from '../../assets/synopsis covers/soul plane.jpg'
+import howHighSynopsis from '../../assets/synopsis covers/how high.jpg'
+import boyzSynopsis from '../../assets/synopsis covers/boyz.jpg'
+import menaceSynopsis from '../../assets/synopsis covers/menace.jpg'
+import fridaySynopsis from '../../assets/synopsis covers/friday.jpg'
+import straightSynopsis from '../../assets/synopsis covers/straight.jpg'
+import aboveSynopsis from '../../assets/synopsis covers/above the rim.jpg'
+import juiceSynopsis from '../../assets/synopsis covers/juice.jpg'
+import sixthSynopsis from '../../assets/synopsis covers/the sixth man.jpg'
+import dontSynopsis from '../../assets/synopsis covers/dont.jpg'
+import barberSynopsis from '../../assets/synopsis covers/barbershop.jpg'
 
 export default function GetCover() {
     return [

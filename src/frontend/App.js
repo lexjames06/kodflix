@@ -1,8 +1,8 @@
 import React from 'react';
-import Cover from './components/Cover.js'
-import Details from './components/Details.js'
-import Welcome from './components/Welcome'
-import NotFound from './components/Not-Found'
+import Cover from './components/Cover/Cover.js'
+import Details from './components/Details/Details.js'
+import Welcome from './components/Welcome/Welcome'
+import NotFound from './components/Not-Found/Not-Found'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './App.css';
 

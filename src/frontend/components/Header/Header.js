@@ -1,5 +1,5 @@
 import React from 'react';
-import Kodflix from '../assets/Logos/Kodflix Logo.png'
+import Kodflix from '../../assets/Logos/Kodflix logo.svg'
 import { Link } from 'react-router-dom'
 import './Header.css'
 
