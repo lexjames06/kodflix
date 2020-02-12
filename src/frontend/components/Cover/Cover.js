@@ -1,29 +1,47 @@
 import React from 'react'
 import Movie from '../Movie/Movie.js'
-import GetCover from '../Cover-get/Cover-get.js'
 import Header from '../Header/Header'
-import { animated, useSpring } from 'react-spring'
 import './Cover.css'
 
-export default function Cover() {
+export default class Cover extends React.Component {
 
-    return (
-        <div>
+    constructor() {
+        super();
+        this.state = { shows: [], loaded: false };
+    }
+
+    componentDidMount() {
+        fetch('/rest/movies')
+            .then(response => response.json())
+            .then(shows => this.setState({ shows: shows }))
+            .then(() => this.setState({ loaded: true }));
+    }
+
+    content() {
+        let { shows } = this.state;
+        return (
             <div>
-                <Header />
+                <div>
+                    <Header />
+                </div>
+                <div className='movie-rows'>
+                    {
+                        shows.map(movie => (
+                            <Movie
+                                key={movie.id}
+                                id={movie.id}
+                                name={movie.name}
+                                year={movie.year}
+                                cover={movie.cover} 
+                            />
+                        ))
+                    }
+                </div>
             </div>
-            <div className='movie-rows'>
-                {
-                    GetCover().map(movie => (
-                        <Movie
-                            key={movie.id}
-                            id={movie.id}
-                            name={movie.name}
-                            year={movie.year}
-                            cover={movie.cover} />
-                    ))
-                }
-            </div>
-        </div>
-    );
+        );
+    }
+
+    render() {
+        return this.state.loaded ? this.content() : <div></div>;
+    }
 }

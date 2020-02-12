@@ -1,6 +1,6 @@
 import React from 'react';
-import Cover from './components/Cover/Cover.js'
-import Details from './components/Details/Details.js'
+import Cover from './components/Cover/Cover'
+import Details from './components/Details/Details'
 import Welcome from './components/Welcome/Welcome'
 import NotFound from './components/Not-Found/Not-Found'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'

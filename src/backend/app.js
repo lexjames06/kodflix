@@ -1,13 +1,12 @@
 const express = require('express')
-const movieList = require ('./movielist')
+const getMovies = require ('./movielist')
 const path = require('path')
 
-const listOfMovies = movieList;
 const app = express()
 const port = process.env.PORT || 3001;
  
 app.get('/rest/movies', (req, res) => {
-  res.send(listOfMovies);
+  res.send(getMovies());
 });
 
 app.use(express.static(path.join(__dirname, '../../build')));
