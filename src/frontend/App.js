@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './App.css';
 
 function App() {
+  document.title = 'Kodflix'
   return (
     <div className="App">
       <BrowserRouter>
